@@ -8,5 +8,5 @@
 
 void prompt(void)
 {
-	printf("shell$ ");
+	printf("my_shell$ ");
 }
