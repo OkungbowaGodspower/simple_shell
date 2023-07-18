@@ -11,6 +11,7 @@
 #define MAX_INPUT_LENGTH 100
 
 void prompt(void);
+char **parse(char *input);
 char *input_reader(int start);
 
 #endif
