@@ -9,6 +9,8 @@
 #include <sys/wait.h>
 #include <limits.h>
 
+extern char **environ;
+
 void run_shell(void);
 char *get_input(void);
 char **strsplit(const char *str, const char *delim);
