@@ -41,7 +41,6 @@ void execute_command(char **args)
 
 void execute_env(void)
 {
-	char **environ;
 	char **env = environ;
 
 	while (*env)
