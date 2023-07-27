@@ -1,5 +1,3 @@
-## Custom Simple Shell
-
 # This is a custom made simple shell (UNIX), it has the implementation of the original sh
 
 Displays a prompt and waits for the user to type a command, ending with a new line.
