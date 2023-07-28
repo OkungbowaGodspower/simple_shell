@@ -23,3 +23,5 @@ Implements the exit built-in, exiting the shell with the specified status if an 
 The shell handles logical operators "&&" and "||" to conditionally execute commands based on the previous command's success or failure.
 
 The shell redirects input away from the keyboard and redirects output to a file or device other than the terminal.
+
+The shell Links any number of commands together to form a complex program. The standard output of one program becomes the standard input of the next.
