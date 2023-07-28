@@ -20,20 +20,5 @@ Handles the "end of file" condition (Ctrl+D).
 The shell terminates gracefully if the "end of file" condition (Ctrl+D) is encountered.
 Implements the exit built-in, exiting the shell with the specified status if an argument is provided or with status 0 otherwise.
 
-The shell implements the exit built-in command, and it can exit with the specified status or status 0 if no argument is provided.
-Implements the env built-in, printing the current environment.
-
-The shell implements the env built-in command, which prints the current environment.
-Implements the setenv and unsetenv built-in commands to initialize/modify and remove environment variables, respectively.
-
-The shell implements the setenv and unsetenv built-in commands for initializing/modifying and removing environment variables.
-Implements the cd built-in command, changing the current directory, handling cd -, and updating the PWD environment variable.
-
-The shell implements the cd built-in command to change the current directory. It also handles cd - to go to the previous directory and updates the PWD environment variable.
-Handles commands separated by ";".
-
-The shell handles multiple commands separated by ";" and executes them sequentially.
-Handles the shell logical operators && and ||.
-
 The shell handles logical operators "&&" and "||" to conditionally execute commands based on the previous command's success or failure.
 
