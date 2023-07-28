@@ -20,8 +20,5 @@ Handles the "end of file" condition (Ctrl+D).
 The shell terminates gracefully if the "end of file" condition (Ctrl+D) is encountered.
 Implements the exit built-in, exiting the shell with the specified status if an argument is provided or with status 0 otherwise.
 
-The shell implements the exit built-in command, and it can exit with the specified status or status 0 if no argument is provided.
-Implements the env built-in, printing the current environment.
-
 The shell handles logical operators "&&" and "||" to conditionally execute commands based on the previous command's success or failure.
 
