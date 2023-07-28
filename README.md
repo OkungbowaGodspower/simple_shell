@@ -32,8 +32,5 @@ Implements the cd built-in command, changing the current directory, handling cd 
 The shell implements the cd built-in command to change the current directory. It also handles cd - to go to the previous directory and updates the PWD environment variable.
 Handles commands separated by ";".
 
-The shell handles multiple commands separated by ";" and executes them sequentially.
-Handles the shell logical operators && and ||.
-
 The shell handles logical operators "&&" and "||" to conditionally execute commands based on the previous command's success or failure.
 
