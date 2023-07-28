@@ -26,8 +26,5 @@ Implements the env built-in, printing the current environment.
 The shell implements the env built-in command, which prints the current environment.
 Implements the setenv and unsetenv built-in commands to initialize/modify and remove environment variables, respectively.
 
-The shell implements the setenv and unsetenv built-in commands for initializing/modifying and removing environment variables.
-Implements the cd built-in command, changing the current directory, handling cd -, and updating the PWD environment variable.
-
 The shell handles logical operators "&&" and "||" to conditionally execute commands based on the previous command's success or failure.
 
