@@ -31,4 +31,11 @@ it substitutes the text to which the alias refers
 
 Automatically produces a list of file names on a command line using pattern-matching characters.
 
-
+Shell terms:
+blank:	A blank is one of the characters in the blank character class defined in the LC CTYPE category. In the POSIX shell, a blank is either a tab or space.
+built-in command:	A command that the shell executes without searching for it and creating a separate process.
+command:	 A sequence of characters in the syntax of the shell language. The shell reads each command and carries out the desired action 
+		either directly or by invoking separate utilities.
+comment:   	Any word that begins with # (pound sign). The word and all characters that follow it, until the next new-line character, are ignored.
+identifier:	A sequence of letters, digits, or underscores from the portable character set, starting with a letter or underscore.
+		The first character of an identifier must not be a digit.Identifiers are used as names for aliases, functions, and named parameters.
