@@ -8,12 +8,13 @@
 
 void run_shell(void)
 {
-	int idx = 0;
 	char *line;
 	char **commands;
 
 	while (1)
 	{
+		int idx = 0;
+
 		if (isatty(STDIN_FILENO))
 		{
 			printf("my_shell$ ");
@@ -21,6 +22,11 @@ void run_shell(void)
 		}
 
 		line = get_input();
+		if (strcmp(line, "exit") == 0)
+		{
+			free(line);
+			break;
+		}
 		commands = strsplit(line, ";");
 
 		while (commands[idx] != NULL)
