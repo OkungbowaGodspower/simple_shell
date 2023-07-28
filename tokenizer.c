@@ -45,7 +45,7 @@ char **strsplit(const char *str, const char *delim)
   * free_tokens - free memory allocated for an array of tokens
   *
   * @tokens: The array of tokens to be freed
-
+  *
   * Return: return nothing
   */
 
