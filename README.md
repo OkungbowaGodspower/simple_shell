@@ -27,4 +27,8 @@ The shell redirects input away from the keyboard and redirects output to a file 
 The shell Links any number of commands together to form a complex program. The standard output of one program becomes the standard input of the next.
 
 The shell Gives an alias name to a command or phrase. When the shell encounters an alias on the command line or in a shell script,
-it substitutes the text to which the alias refers.
+it substitutes the text to which the alias refers
+
+Automatically produces a list of file names on a command line using pattern-matching characters.
+
+
