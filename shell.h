@@ -25,5 +25,6 @@ void execute_env(void);
 void execute_cd(char **args);
 void execute_unsetenv(char **args);
 char *get_current_directory(void);
+void execute_exit(char **args);
 
 #endif /* SHELL_H */
