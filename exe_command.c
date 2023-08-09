@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
-  * execute_command - execute a command in a child process
+  * execute_command - xecute a command in a child process
   *
   * @args: an array of strings representing the command and its arguments
   *
@@ -10,35 +10,25 @@
 
 void execute_command(char **args)
 {
-	pid_t pid;
 	int status;
 
-	if (strcmp(args[0], "cd") == 0)
-	{
-		execute_cd(args);
-		return;
-	}
+	pid_t pid;
+
 	pid = fork();
 	if (pid == 0)
 	{
 		if (execvp(args[0], args) == -1)
 		{
 			perror("execute_command");
-			exit(EXIT_FAILURE);
 		}
+		exit(EXIT_FAILURE);
 	} else if (pid < 0)
 	{
 		perror("execute_command");
-		exit(EXIT_FAILURE);
 	} else
 	{
 		do {
-			pid_t wpid = waitpid(pid, &status, WUNTRACED);
-
-			if (wpid == -1)
-			{
-				perror("waitpid");
-			}
+			pid = waitpid(pid, &status, WUNTRACED);
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 }
