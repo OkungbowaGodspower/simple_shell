@@ -27,56 +27,44 @@ char *get_current_directory(void)
   *
   * Return: returns nothing
   */
-int execute_cd(char **args)
+void execute_cd(char **args)
 {
 	char *current_dir = NULL;
+	char cwd[PATH_MAX];
+	char *prev_dir = get_current_directory();
 
 	if (args[1] == NULL || strcmp(args[1], "~") == 0)
 	{
 		current_dir = getenv("HOME");
-	}
-	else if (strcmp(args[1], "-") == 0)
+	} else if (strcmp(args[1], "-") == 0)
 	{
 		current_dir = getenv("OLDPWD");
-	}
-	else
+	} else
 	{
 		current_dir = args[1];
 	}
 	if (current_dir != NULL)
 	{
-		char *prev_dir = get_current_directory();
-
 		if (prev_dir != NULL)
 		{
 			if (chdir(current_dir) != 0)
 			{
 				perror("cd");
-			}
-			else
+			} else
 			{
-				char cwd[PATH_MAX];
-
 				if (getcwd(cwd, sizeof(cwd)) != NULL)
 				{
 					setenv("OLDPWD", prev_dir, 1);
 					setenv("PWD", cwd, 1);
-				}
-				else
+				} else
 				{
 					perror("getcwd");
 				}
 			}
 			free(prev_dir);
-		}
-		else
+		} else
 		{
 			perror("get_current_directory");
 		}
 	}
-	else
-	{
-		perror("cd");
-	}
-	return (1);
 }
