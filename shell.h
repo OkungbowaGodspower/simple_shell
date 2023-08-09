@@ -22,7 +22,7 @@ void *safe_malloc(size_t size);
 char *safe_strdup(const char *str);
 void execute_setenv(char **args);
 void execute_env(void);
-int execute_cd(char **args);
+void execute_cd(char **args);
 void execute_unsetenv(char **args);
 char *get_current_directory(void);
 void execute_exit(char **args);
